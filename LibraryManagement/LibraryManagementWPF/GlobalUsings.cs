@@ -1,0 +1,16 @@
+﻿global using System.Windows;
+global using System.Windows.Controls;
+global using System.Windows.Media;
+global using System.Windows.Media.Animation;
+global using LibraryTestConsole.DbContextClass;
+global using LibraryTestConsole.Entities;
+global using Microsoft.EntityFrameworkCore;
+global using System.Collections.ObjectModel;
+global using System.Security.Cryptography;
+global using System.Text;
+global using System.Windows.Input;
+global using System.Windows.Media.Effects;
+global using System.ComponentModel.DataAnnotations;
+global using System.ComponentModel.DataAnnotations.Schema;
+global using Microsoft.EntityFrameworkCore.Migrations;
+global using Microsoft.EntityFrameworkCore.Infrastructure;

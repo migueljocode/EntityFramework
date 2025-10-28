@@ -1,0 +1,105 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <PathGeometry x:Key="CloseIconGeometry">
+        <PathFigure StartPoint="5 15">
+            <LineSegment Point="25 15"/>
+        </PathFigure>
+    </PathGeometry>
+
+
+    <ControlTemplate x:Key="ButtonTemplate" TargetType="{x:Type Button}">
+        <Border Background="{TemplateBinding Background}" Width="47" Height="29.8"
+                SnapsToDevicePixels="True"
+                BorderBrush="Transparent"
+                BorderThickness="0"
+                Cursor="Hand">
+            <ContentPresenter />
+        </Border>
+    </ControlTemplate>
+
+
+    <Style x:Key="MimimizeButtonStyle" TargetType="{x:Type Button}">
+
+        <Setter Property="SnapsToDevicePixels" Value="True"></Setter>
+
+        <Setter Property="Background" Value="Transparent"/>
+        
+        <Setter Property="Template" Value="{StaticResource ButtonTemplate}"/>
+
+        <Style.Triggers>
+            
+            
+            <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation Duration="0:0:0.25"
+                                        Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)"
+                                        To="#00B4DB"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+            
+            
+            
+            <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation
+                                        Duration="0:0:0.25"
+                                        Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)"
+                                        To="Transparent"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            
+            </EventTrigger>
+
+
+        </Style.Triggers>
+
+
+    </Style>
+
+
+    <Style x:Key="CloseButtonStyle" TargetType="{x:Type Button}">
+
+
+        <Setter Property="Background" Value="Transparent"/>
+
+        <Setter Property="Template" Value="{StaticResource ButtonTemplate}"/>
+
+        <Style.Triggers>
+
+
+            <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation Duration="0:0:0.25"
+                                     Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)"
+                                     To="#FFFF4C4C"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+
+
+
+            <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation
+                                     Duration="0:0:0.25"
+                                     Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)"
+                                     To="Transparent"/>
+                    </Storyboard>
+                </BeginStoryboard>
+
+            </EventTrigger>
+
+
+        </Style.Triggers>
+
+
+    </Style>
+
+</ResourceDictionary>
