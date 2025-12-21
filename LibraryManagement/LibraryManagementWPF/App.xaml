@@ -6,11 +6,13 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources\Border Animations.xaml"/>
-                <ResourceDictionary Source="Resources\LogginButton.xaml"/>
-                <ResourceDictionary Source="Resources\WindowStateButtonResources.xaml"/>
-                <ResourceDictionary Source="Resources\FancyRadioButton.xaml"/>
-                <ResourceDictionary Source="Resources\CustomMenuResources.xaml"/>
+                <ResourceDictionary Source="/Resources/Border Animations.xaml"/>
+                <ResourceDictionary Source="/Resources/LogginButton.xaml"/>
+                <ResourceDictionary Source="/Resources/WindowStateButtonResources.xaml"/>
+                <ResourceDictionary Source="/Resources/FancyRadioButton.xaml"/>
+                <ResourceDictionary Source="/Resources/CustomMenuResources.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles.xaml"/>
+                <ResourceDictionary Source="/Resources/Animations.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <!--<FontFamily x:Key="SFRound">pack://application:,,,/LibraryManagementWPF;Fonts/FontsFree-Net-SF-Pro-Rounded-Regular.ttf</FontFamily>-->
         </ResourceDictionary>

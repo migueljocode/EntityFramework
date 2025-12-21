@@ -9,15 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Fonts\FontsFree-Net-SF-Pro-Rounded-Bold.ttf" />
-    <None Remove="Fonts\FontsFree-Net-SF-Pro-Rounded-Regular.ttf" />
-    <None Remove="Icons\close-24.png" />
-    <None Remove="Icons\icons8-close-48.png" />
-    <None Remove="Icons\icons8-minus-48.png" />
-    <None Remove="Icons\subtract-48.png" />
-    <None Remove="Images\blue-book-headphones-arrangement.jpg" />
-    <None Remove="Images\book-headphones-arrangement.jpg" />
-    <None Remove="Images\books-headphones-arrangement.jpg" />
+    <None Remove="Resources\Fonts\FontsFree-Net-SF-Pro-Rounded-Bold.ttf" />
+    <None Remove="Resources\Fonts\FontsFree-Net-SF-Pro-Rounded-Regular.ttf" />
+    <None Remove="Resources\Icons\close-24.png" />
+    <None Remove="Resources\Icons\icons8-close-48.png" />
+    <None Remove="Resources\Icons\icons8-minus-48.png" />
+    <None Remove="Resources\Icons\subtract-48.png" />
+    <None Remove="Resources\Images\blue-book-headphones-arrangement.jpg" />
+    <None Remove="Resources\Images\book-headphones-arrangement.jpg" />
+    <None Remove="Resources\Images\books-headphones-arrangement.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,15 +29,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Fonts\FontsFree-Net-SF-Pro-Rounded-Bold.ttf" />
-    <Resource Include="Fonts\FontsFree-Net-SF-Pro-Rounded-Regular.ttf" />
-    <Resource Include="Icons\close-24.png" />
-    <Resource Include="Icons\icons8-close-48.png" />
-    <Resource Include="Icons\icons8-minus-48.png" />
-    <Resource Include="Icons\subtract-48.png" />
-    <Resource Include="Images\blue-book-headphones-arrangement.jpg" />
-    <Resource Include="Images\book-headphones-arrangement.jpg" />
-    <Resource Include="Images\books-headphones-arrangement.jpg" />
+    <Resource Include="Resources\Fonts\FontsFree-Net-SF-Pro-Rounded-Bold.ttf" />
+    <Resource Include="Resources\Fonts\FontsFree-Net-SF-Pro-Rounded-Regular.ttf" />
+    <Resource Include="Resources\Icons\close-24.png" />
+    <Resource Include="Resources\Icons\icons8-close-48.png" />
+    <Resource Include="Resources\Icons\icons8-minus-48.png" />
+    <Resource Include="Resources\Icons\subtract-48.png" />
+    <Resource Include="Resources\Images\blue-book-headphones-arrangement.jpg" />
+    <Resource Include="Resources\Images\book-headphones-arrangement.jpg" />
+    <Resource Include="Resources\Images\books-headphones-arrangement.jpg" />
   </ItemGroup>
 
 </Project>

@@ -4,43 +4,9 @@
     <LinearGradientBrush x:Key="BlueLinearGradient">
             <GradientStop Color="#00B4DB" Offset="-1"/>
             <GradientStop Color="#0A5F83" Offset="2"/>
-        </LinearGradientBrush>
-    
-    <Style x:Key="SignInSignUpBorderStyle" TargetType="Border">
-        <!--<Setter Property="Width" Value="300"/>-->
-        <Setter Property="HorizontalAlignment" Value="Stretch"/>
-        <Setter Property="Background">
-            <Setter.Value>
-                <LinearGradientBrush>
-                    <GradientStop Color="#00B4DB" Offset="1.5"/>
-                    <GradientStop Color="#0A5F83" Offset="-0.5"/>
-                </LinearGradientBrush>
-            </Setter.Value>
-        </Setter>
-        <Setter Property="Effect">
-            <Setter.Value>
-                <BlurEffect Radius="0"/>
-            </Setter.Value>
-        </Setter>
-
-        <Setter Property="RenderTransform">
-            <Setter.Value>
-                <TranslateTransform X="0"/>
-            </Setter.Value>
-        </Setter> 
-    </Style>
+    </LinearGradientBrush>
 
     <Storyboard x:Key="SignInToSignUp" Storyboard.TargetProperty="(RenderTransform).(TranslateTransform.X)">
-        <!--<ThicknessAnimation Storyboard.TargetProperty="Margin"
-                            To="481 0 0 0"
-                            Duration="0:0:1.5"
-                            AutoReverse="False">
-            <ThicknessAnimation.EasingFunction>
-                <PowerEase Power="5" EasingMode="EaseInOut"/>
-            </ThicknessAnimation.EasingFunction>
-        </ThicknessAnimation>-->
-       
-        <!--double animation-->
         <DoubleAnimation Storyboard.TargetName="LogginFormBorder"
                          Storyboard.TargetProperty="(RenderTransform).(TranslateTransform.X)"
                          Duration="0:0:1.5"
@@ -64,7 +30,7 @@
                          To="0"
                          Duration="0:0:0.75"
                          AutoReverse="True">
-            
+
         </DoubleAnimation>
 
         <DoubleAnimation Storyboard.TargetName="SignInBorder" Storyboard.TargetProperty="Opacity"
@@ -78,25 +44,8 @@
                  To="1"
                  Duration="0:0:1.25"/>
 
-
-        <!--<DoubleAnimation Storyboard.TargetName="SignInBorder" Storyboard.TargetProperty="Effect.Radius"
-                         BeginTime="0:0:0"
-                         To="10"
-                         Duration="0:0:0.75"/>-->
-
-
     </Storyboard>
-
     <Storyboard x:Key="SignUpToSignIn">
-        <!--<ThicknessAnimation Storyboard.TargetName="LogginFormBorder"
-            Storyboard.TargetProperty="Margin"
-                            To="0 0 0 0"
-                            Duration="0:0:1.5"
-                            AutoReverse="False">
-            <ThicknessAnimation.EasingFunction>
-                <PowerEase Power="5" EasingMode="EaseInOut"/>
-            </ThicknessAnimation.EasingFunction>
-        </ThicknessAnimation>-->
 
         <DoubleAnimation Storyboard.TargetName="LogginFormBorder"
                          Storyboard.TargetProperty="(RenderTransform).(TranslateTransform.X)"
@@ -133,11 +82,6 @@
          From="1"
          To="0"
          Duration="0:0:0.75"/>
-
-        <!--<DoubleAnimation Storyboard.TargetName="SignInBorder" Storyboard.TargetProperty="Effect.Radius"
-         BeginTime="0:0:0.75"
-         To="0"
-         Duration="0:0:0.75"/>-->
 
     </Storyboard>
 

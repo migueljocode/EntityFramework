@@ -7,12 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="MyFancyTextBox.xaml.cs">
+    <Compile Update="Resources\MyFancyTextBox.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MyFancyTextBox.xaml">
+    <Page Update="Resources\MyFancyTextBox.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Border Animations.xaml">

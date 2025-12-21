@@ -4,58 +4,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManagementWPF"
         mc:Ignorable="d"
-        Title="MainWindow" 
-        Height="500" Width="798"
-        MaxHeight="500" MaxWidth="798"
-        MinHeight="500" MinWidth="798"
-        FontSize="20"
-        Background="#E6E6E0"
-        FontFamily="pack://application:,,,/Fonts/#SF Pro Rounded"
         Name="mainWindow"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="None"
-        ResizeMode="NoResize">
-    
-    
+        Style="{StaticResource WindowStyle}">
+
     <Window.Resources>
-        <Storyboard x:Key="InvalidSignInTextBlockAnimation" Storyboard.TargetName="InvalidSignInTextBlock" Storyboard.TargetProperty="Opacity">
-            <DoubleAnimation Duration="0:0:1.5"
-                             From="0"
-                             To="1"
-                             AutoReverse="True">
-                <DoubleAnimation.EasingFunction>
-                    <ExponentialEase Exponent="10"/>
-                </DoubleAnimation.EasingFunction>
-            </DoubleAnimation>
-        </Storyboard>
         <Storyboard x:Key="InvalidSignInInputAnimation">
 
             <ColorAnimation Storyboard.TargetName="SignInUserName" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Transparent"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Transparent"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <ColorAnimation Storyboard.TargetName="SignInPassword" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Transparent"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Transparent"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
         </Storyboard>
+
+        <Storyboard x:Key="InvalidSignInTextBlockAnimation" Storyboard.TargetName="InvalidSignInTextBlock" Storyboard.TargetProperty="Opacity">
+            <DoubleAnimation Duration="0:0:1.5"
+                         From="0"
+                         To="1"
+                         AutoReverse="True">
+                <DoubleAnimation.EasingFunction>
+                    <ExponentialEase Exponent="10"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
         <Storyboard x:Key="InvalidSignUpTextBlockAnimation" Storyboard.TargetName="InvalidSignUpTextBlock" Storyboard.TargetProperty="Opacity">
             <DoubleAnimation Duration="0:0:1.5"
-                             From="0"
-                             To="1"
-                             AutoReverse="True">
+                         From="0"
+                         To="1"
+                         AutoReverse="True">
                 <DoubleAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </DoubleAnimation.EasingFunction>
@@ -64,40 +57,40 @@
         <Storyboard x:Key="InvalidSignUpInputAnimation">
 
             <ColorAnimation Storyboard.TargetName="SignUpUserName" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                             Duration="0:0:1.5"
-                             From="Transparent"
-                             To="Red"
-                             AutoReverse="True">
+                         Duration="0:0:1.5"
+                         From="Transparent"
+                         To="Red"
+                         AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <ColorAnimation Storyboard.TargetName="SignUpPassword" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Transparent"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Transparent"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <ColorAnimation Storyboard.TargetName="SignUpEmail" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Transparent"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Transparent"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <ColorAnimation Storyboard.TargetName="SignUpRole" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Gray"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Gray"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
@@ -106,10 +99,10 @@
         </Storyboard>
         <Storyboard x:Key="RoundedMenuStoryboardAppear" Storyboard.TargetName="RoundedMenu">
             <DoubleAnimation Storyboard.TargetProperty="(RenderTransform).(TranslateTransform.Y)"
-                             BeginTime="0:0:1"
-                             From="80"
-                             To="0"
-                             Duration="0:0:0.75">
+                         BeginTime="0:0:1"
+                         From="80"
+                         To="0"
+                         Duration="0:0:0.75">
                 <DoubleAnimation.EasingFunction>
                     <BackEase Amplitude="1" EasingMode="EaseOut"/>
                 </DoubleAnimation.EasingFunction>
@@ -117,10 +110,10 @@
         </Storyboard>
         <Storyboard x:Key="MainPageAppear" Storyboard.TargetName="MainPage">
             <DoubleAnimation Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"
-                             BeginTime="0:0:0.75"
-                             From="1.5"
-                             To="1"
-                             Duration="0:0:1">
+                         BeginTime="0:0:0.75"
+                         From="1.5"
+                         To="1"
+                         Duration="0:0:1">
                 <DoubleAnimation.EasingFunction>
                     <PowerEase Power="5" EasingMode="EaseOut"/>
                 </DoubleAnimation.EasingFunction>
@@ -128,30 +121,30 @@
 
 
             <DoubleAnimation Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"
-                             BeginTime="0:0:0.75"
-                             From="1.5"
-                             To="1"
-                             Duration="0:0:1">
+                         BeginTime="0:0:0.75"
+                         From="1.5"
+                         To="1"
+                         Duration="0:0:1">
                 <DoubleAnimation.EasingFunction>
                     <PowerEase Power="5" EasingMode="EaseOut"/>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
 
             <DoubleAnimation Storyboard.TargetProperty="Opacity"
-                             BeginTime="0:0:0.75"
-                             From="0"
-                             To="1"
-                             Duration="0:0:1">
+                         BeginTime="0:0:0.75"
+                         From="0"
+                         To="1"
+                         Duration="0:0:1">
                 <DoubleAnimation.EasingFunction>
                     <PowerEase Power="5" EasingMode="EaseOut"/>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
 
             <DoubleAnimation Storyboard.TargetProperty="(Effect).(Radius)"
-                             BeginTime="0:0:0.75"
-                             From="20"
-                             To="0"
-                             Duration="0:0:1">
+                         BeginTime="0:0:0.75"
+                         From="20"
+                         To="0"
+                         Duration="0:0:1">
                 <DoubleAnimation.EasingFunction>
                     <PowerEase Power="5" EasingMode="EaseOut"/>
                 </DoubleAnimation.EasingFunction>
@@ -162,10 +155,10 @@
         </Storyboard>
         <Storyboard x:Key="MainPageTextsAppear" Storyboard.TargetName="MainPageTexts">
             <DoubleAnimation Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"
-                             BeginTime="0:0:1.25"
-                             From="1.4"
-                             To="1"
-                             Duration="0:0:1.25">
+                         BeginTime="0:0:1.25"
+                         From="1.4"
+                         To="1"
+                         Duration="0:0:1.25">
                 <DoubleAnimation.EasingFunction>
                     <PowerEase Power="5" EasingMode="EaseOut"/>
                 </DoubleAnimation.EasingFunction>
@@ -173,30 +166,30 @@
 
 
             <DoubleAnimation Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"
-                             BeginTime="0:0:1.25"
-                             From="1.4"
-                             To="1"
-                             Duration="0:0:1.25">
+                         BeginTime="0:0:1.25"
+                         From="1.4"
+                         To="1"
+                         Duration="0:0:1.25">
                 <DoubleAnimation.EasingFunction>
                     <PowerEase Power="5" EasingMode="EaseOut"/>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
 
             <DoubleAnimation Storyboard.TargetProperty="Opacity"
-                             BeginTime="0:0:1.25"
-                             From="0"
-                             To="1"
-                             Duration="0:0:1.25">
+                         BeginTime="0:0:1.25"
+                         From="0"
+                         To="1"
+                         Duration="0:0:1.25">
                 <DoubleAnimation.EasingFunction>
                     <PowerEase Power="5" EasingMode="EaseOut"/>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
 
             <DoubleAnimation Storyboard.TargetProperty="(Effect).(Radius)"
-                             BeginTime="0:0:1.25"
-                             From="20"
-                             To="0"
-                             Duration="0:0:1.25">
+                         BeginTime="0:0:1.25"
+                         From="20"
+                         To="0"
+                         Duration="0:0:1.25">
                 <DoubleAnimation.EasingFunction>
                     <PowerEase Power="5" EasingMode="EaseOut"/>
                 </DoubleAnimation.EasingFunction>
@@ -208,51 +201,51 @@
         <Storyboard x:Key="InvalidBookInputAnimation">
 
             <ColorAnimation Storyboard.TargetName="TitleTextBox" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                    Duration="0:0:1.5"
-                    From="Transparent"
-                    To="Red"
-                    AutoReverse="True">
+                Duration="0:0:1.5"
+                From="Transparent"
+                To="Red"
+                AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <ColorAnimation Storyboard.TargetName="DescriptionTextBox" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                    Duration="0:0:1.5"
-                    From="Transparent"
-                    To="Red"
-                    AutoReverse="True">
+                Duration="0:0:1.5"
+                From="Transparent"
+                To="Red"
+                AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <ColorAnimation Storyboard.TargetName="AuthorTextBox" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Transparent"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Transparent"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <ColorAnimation Storyboard.TargetName="ISBNTextBox" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Transparent"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Transparent"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <DoubleAnimation Storyboard.TargetName="InvalidBookTextBlock"
-                             Storyboard.TargetProperty="Opacity"
-                             Duration="0:0:1.5"
-                             From="0"
-                             To="1"
-                             AutoReverse="True">
+                         Storyboard.TargetProperty="Opacity"
+                         Duration="0:0:1.5"
+                         From="0"
+                         To="1"
+                         AutoReverse="True">
 
                 <DoubleAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
@@ -264,51 +257,51 @@
         <Storyboard x:Key="InvalidUserInputAnimation">
 
             <ColorAnimation Storyboard.TargetName="UsernameTextBox" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Transparent"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Transparent"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <ColorAnimation Storyboard.TargetName="PasswordTextBox" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Transparent"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Transparent"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <ColorAnimation Storyboard.TargetName="EmailTextBox" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Transparent"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Transparent"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <ColorAnimation Storyboard.TargetName="UserUpRole" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Transparent"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Transparent"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <DoubleAnimation Storyboard.TargetName="InvalidUserTextBlock"
-                             Storyboard.TargetProperty="Opacity"
-                             Duration="0:0:1.5"
-                             From="0"
-                             To="1"
-                             AutoReverse="True">
+                         Storyboard.TargetProperty="Opacity"
+                         Duration="0:0:1.5"
+                         From="0"
+                         To="1"
+                         AutoReverse="True">
 
                 <DoubleAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
@@ -320,31 +313,31 @@
         <Storyboard x:Key="InvalidLoanInputAnimation">
 
             <ColorAnimation Storyboard.TargetName="LoanBookIdTextBox" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Transparent"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Transparent"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <ColorAnimation Storyboard.TargetName="LoanUserIdTextBox" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Transparent"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Transparent"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <DoubleAnimation Storyboard.TargetName="InvalidLoanTextBlock"
-                             Storyboard.TargetProperty="Opacity"
-                             Duration="0:0:1.5"
-                             From="0"
-                             To="1"
-                             AutoReverse="True">
+                         Storyboard.TargetProperty="Opacity"
+                         Duration="0:0:1.5"
+                         From="0"
+                         To="1"
+                         AutoReverse="True">
 
                 <DoubleAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
@@ -356,51 +349,51 @@
         <Storyboard x:Key="InvalidReviewInputAnimation">
 
             <ColorAnimation Storyboard.TargetName="ReviewUserIdTextBox" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Transparent"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Transparent"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <ColorAnimation Storyboard.TargetName="ReviewBookIdTextBox" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Transparent"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Transparent"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <ColorAnimation Storyboard.TargetName="ReviewRatingTextBox" Storyboard.TargetProperty="(Borderbrush).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Transparent"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Transparent"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <ColorAnimation Storyboard.TargetName="ReviewCommentTextBox" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)"
-                            Duration="0:0:1.5"
-                            From="Transparent"
-                            To="Red"
-                            AutoReverse="True">
+                        Duration="0:0:1.5"
+                        From="Transparent"
+                        To="Red"
+                        AutoReverse="True">
                 <ColorAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
                 </ColorAnimation.EasingFunction>
             </ColorAnimation>
 
             <DoubleAnimation Storyboard.TargetName="InvalidReviewTextBlock"
-                             Storyboard.TargetProperty="Opacity"
-                             Duration="0:0:1.5"
-                             From="0"
-                             To="1"
-                             AutoReverse="True">
+                         Storyboard.TargetProperty="Opacity"
+                         Duration="0:0:1.5"
+                         From="0"
+                         To="1"
+                         AutoReverse="True">
 
                 <DoubleAnimation.EasingFunction>
                     <ExponentialEase Exponent="10"/>
@@ -409,42 +402,21 @@
             </DoubleAnimation>
 
         </Storyboard>
-    </Window.Resources>
 
+    </Window.Resources>
 
     <Grid>
         <!-- Drag Move Border-->
-        <Rectangle Height="12.5" HorizontalAlignment="Stretch" VerticalAlignment="Top" MouseDown="DragMoveBorder_MouseDown" Cursor="Hand" Fill="Transparent" Panel.ZIndex="4" Margin="0 0 100 0">
-            
-        </Rectangle>
+        <Rectangle Style="{StaticResource Rect_DragMove}" MouseDown="DragMoveBorder_MouseDown" Panel.ZIndex="4"/>
+
         <!-- Window State Buttons -->
-        <StackPanel Name="WindowStateButtons" Orientation="Horizontal" Panel.ZIndex="3" HorizontalAlignment="Right" VerticalAlignment="Top" MaxHeight="100">
-            <Button SnapsToDevicePixels="True" Click="Button_Click" Style="{StaticResource MimimizeButtonStyle}">
-                <Image RenderTransformOrigin="0.5 0.5" Source="Icons/icons8-minus-48.png" SnapsToDevicePixels="True" Width="20" Height="12.5" Stretch="Fill">
-                    <Image.RenderTransform>
-                        <ScaleTransform ScaleY="1.1"/>
-                    </Image.RenderTransform>
-                </Image>
-            </Button>
-            <Button SnapsToDevicePixels="True" Name="CloseButton" Click="CloseButton_Click" Style="{StaticResource CloseButtonStyle}">
-                <Image Source="Icons/icons8-close-48.png" SnapsToDevicePixels="True" Width="20" Height="20"/>
-            </Button>
+        <StackPanel Name="WindowStateButtons" Style="{StaticResource StackPanel_One}" Panel.ZIndex="3">
+            <Button Click="Button_Click" Style="{StaticResource MimimizeButtonStyle}" Content="{StaticResource Minus_Image}"/>
+            <Button Name="CloseButton" Click="CloseButton_Click" Style="{StaticResource CloseButtonStyle}" Content="{StaticResource Close_Image}"/>
         </StackPanel>
 
         <!-- SignUpSignIn -->
-        <Border Visibility="Visible" Background="{Binding ElementName=mainWindow, Path=Background}" Name="SignUpSignInBorder" Panel.ZIndex="1">
-            <Border.Effect>
-                <BlurEffect Radius="0"/>
-            </Border.Effect>
-            <Border.RenderTransform>
-                <TranslateTransform>
-                    <TranslateTransform.Y>
-                        0
-                    </TranslateTransform.Y>
-                </TranslateTransform>
-            </Border.RenderTransform>
-
-
+        <Border Style="{StaticResource Border_SignUpSignIn}" Background="{Binding ElementName=mainWindow, Path=Background}" Name="SignUpSignInBorder" Panel.ZIndex="1">
 
             <Grid>
 
@@ -454,55 +426,50 @@
                     <ColumnDefinition Width="300"/>
                 </Grid.ColumnDefinitions>
 
-                <Border Visibility="Visible" x:Name="LogginFormBorder" Panel.ZIndex="2"  Style="{StaticResource SignInSignUpBorderStyle}" Padding="10">
+                <Border x:Name="LogginFormBorder" Panel.ZIndex="2"  Style="{StaticResource SignInSignUpBorderStyle}">
                     <Grid>
                         <StackPanel Name="LoginBorderStackpanel1">
-                            <TextBlock Name="HeaderLogginFormBorder" Text="Welcome to Our Cummunity!" Foreground="#E6E6E0" Margin="0 50 0 0" HorizontalAlignment="Center" FontWeight="Bold" FontSize="18"/>
-                            <TextBlock Name="BodyLogginFormBorder" TextWrapping="Wrap" Margin="20 20 20 0" Foreground="#E6E6E0" HorizontalAlignment="Center" FontSize="17">
+                            <TextBlock Name="HeaderLogginFormBorder" Style="{StaticResource TextBlock_HeaderLogginFormBorder}"/>
+                            <TextBlock Name="BodyLogginFormBorder" Style="{StaticResource TextBlock_BodyLogginFormBorder}">
                                 Please log in to access your account and explore all the features we offer.
                                 <LineBreak/>
                                 <LineBreak/>
                                 if you're new, feel free to sign up and join us!
                             </TextBlock>
                         </StackPanel>
-                        <Button Style="{StaticResource LoginButtonStyle}" Content="Sign Up" Name="SignInSignUp" Click="SignInSignUp_Click"/>
+                        <Button Style="{StaticResource LoginButtonStyle}" Name="SignInSignUp" Click="SignInSignUp_Click"/>
                     </Grid>
                 </Border>
 
-                <Border Visibility="Visible" x:Name="SignInBorder" Grid.Column="1" Grid.ColumnSpan="2">
-                    <Border.Effect>
-                        <BlurEffect Radius="0"/>
-                    </Border.Effect>
+                <Border x:Name="SignInBorder" Style="{StaticResource Border_SignInBorder}" Grid.Column="1" Grid.ColumnSpan="2">
                     <Grid>
                         <StackPanel>
-                            <TextBlock Text="Sign In to Library" HorizontalAlignment="Center" Margin="0 50 0 0" FontSize="30" Foreground="{StaticResource BlueLinearGradient}" FontWeight="Bold"/>
+                            <TextBlock Style="{StaticResource TextBlock_Sign In to Library}"/>
                             <local:MyFancyTextBox Margin="50 90 50 0" x:Name="SignInUserName" Borderbrush="Transparent" InformationTextBlock="Username"/>
                             <local:MyFancyTextBox Margin="50 10 50 0" x:Name="SignInPassword" InformationTextBlock="Password"/>
-                            <TextBlock Opacity="0" Name="InvalidSignInTextBlock" Text="Username or Password is invalid Try Again!" Margin="50 10" TextAlignment="Center" Foreground="Red" FontSize="15"/>
+                            <TextBlock Name="InvalidSignInTextBlock" Style="{StaticResource TextBlock_InvalidSignInTextBlock}"/>
                         </StackPanel>
-                        <Button Name="SignInButton" Content="Sign In" Style="{StaticResource LoginButtonStyle}" BorderBrush="{StaticResource BlueLinearGradient}" Foreground="{StaticResource BlueLinearGradient}" Click="SignIn_Click">
-                        </Button>
+                        <Button Style="{StaticResource Button_SignInButton}" Name="SignInButton" Click="SignIn_Click"/>
                     </Grid>
                 </Border>
 
-                <Border x:Name="SignUpBorder" Visibility="Collapsed" Grid.Column="0" Grid.ColumnSpan="2" >
-                    <Border.Effect>
-                        <BlurEffect Radius="0"/>
-                    </Border.Effect>
+                <Border x:Name="SignUpBorder" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource Border_SignUpBorder}">
                     <Grid>
                         <StackPanel>
-                            <TextBlock Text="Sign Up to Library" HorizontalAlignment="Center" Margin="0 50 0 0" FontSize="30" Foreground="{StaticResource BlueLinearGradient}" FontWeight="Bold"/>
+                            <TextBlock Style="{StaticResource TextBlock_Sign Up to Library}"/>
                             <local:MyFancyTextBox Margin="50 15 50 0" x:Name="SignUpUserName" InformationTextBlock="Username"/>
                             <local:MyFancyTextBox Margin="50 10 50 0" x:Name="SignUpPassword" InformationTextBlock="Password"/>
                             <local:MyFancyTextBox Margin="50 10 50 0" x:Name="SignUpEmail" InformationTextBlock="Email"/>
+
                             <StackPanel Margin="13 20 50 0">
-                                <TextBlock Name="SignUpRole" Margin="50 0 0 5" FontSize="15" Text="Role" Foreground="Gray"/>
-                                <RadioButton Margin="45 0 0 0" Name="AdminRadioButton" Content="Admin"/>
-                                <RadioButton Margin="45 0 0 0" Name="MemberRadioButton" Content="Member"/>
+                                <TextBlock Style="{StaticResource TextBlock_SignUpRole}" Name="SignUpRole" />
+                                <RadioButton Style="{StaticResource RadioButton_AdminRadioButton}"  Name="AdminRadioButton"/>
+                                <RadioButton Style="{StaticResource RadioButton_MemberRadioButton}" Name="MemberRadioButton"/>
                             </StackPanel>
+
                         </StackPanel>
-                        <TextBlock Opacity="0" Name="InvalidSignUpTextBlock" Text="Fill All the Fields and Try Again!" Margin="50 30" VerticalAlignment="Bottom" TextAlignment="Center" Foreground="Red" FontSize="15"/>
-                        <Button Content="Sign Up" Style="{StaticResource LoginButtonStyle}" BorderBrush="{StaticResource BlueLinearGradient}" Foreground="{StaticResource BlueLinearGradient}" Click="SignUp_Click"/>
+                        <TextBlock Style="{StaticResource TextBlock_InvalidSignUpTextBlock}" Name="InvalidSignUpTextBlock" />
+                        <Button Style="{StaticResource Button_Sign Up}" Click="SignUp_Click"/>
                     </Grid>
                 </Border>
 
@@ -510,42 +477,22 @@
         </Border>
 
         <!-- Menu -->
-        <Border Visibility="Collapsed" Panel.ZIndex="2" Name="RoundedMenu" Padding="5" Style="{StaticResource RoundedMenu}">
+        <Border Style="{StaticResource Border_Menu}" Panel.ZIndex="2" Name="RoundedMenu">
 
-            <Border.RenderTransform>
-                <TranslateTransform Y="80"/>
-            </Border.RenderTransform>
-
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
-                <Button Click="UsersButton_Click" Name="UsersButton" Style="{StaticResource RoundedButton}" Content="Users" Margin="7.5 0 7.5 0"/>
-                <Button Click="BooksButton_Click" Name="BooksButton" Style="{StaticResource RoundedButton}" Content="Books" Margin="7.5 0 7.5 0"/>
-                <Button Click="LoansButton_Click" Name="LoansButton" Style="{StaticResource RoundedButton}" Content="Loans" Margin="7.5 0 7.5 0"/>
-                <Button Click="ReviewsButton_Click" Name="ReviewsButton" Style="{StaticResource RoundedButton}" Content="Reviews" Margin="7.5 0 7.5 0"/>
+            <StackPanel Style="{StaticResource StackPanel_Two}">
+                <Button Click="UsersButton_Click" Name="UsersButton" Style="{StaticResource RoundedButton_Users}"/>
+                <Button Click="BooksButton_Click" Name="BooksButton" Style="{StaticResource RoundedButton_Books}"/>
+                <Button Click="LoansButton_Click" Name="LoansButton" Style="{StaticResource RoundedButton_Loans}"/>
+                <Button Click="ReviewsButton_Click" Name="ReviewsButton" Style="{StaticResource RoundedButton_Reviews}"/>
             </StackPanel>
         </Border>
 
         <!-- Main Page -->
-        <Border Visibility="Collapsed" Opacity="0" RenderTransformOrigin="0.5 0.5" Name="MainPage">
-
-            <Border.Effect>
-                <BlurEffect Radius="0"></BlurEffect>
-            </Border.Effect>
-
-            <Border.RenderTransform>
-                <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
-            </Border.RenderTransform>
+        <Border Style="{StaticResource Border_MainPage}" Name="MainPage">
 
             <Grid>
-                <Image Panel.ZIndex="-1" Source="Images/blue-book-headphones-arrangement.jpg" Stretch="UniformToFill"/>
-                <Border RenderTransformOrigin="0.280 0.5" Opacity="0" Name="MainPageTexts" Background="Transparent" BorderThickness="0">
-
-                    <Border.Effect>
-                        <BlurEffect Radius="0"></BlurEffect>
-                    </Border.Effect>
-
-                    <Border.RenderTransform>
-                        <ScaleTransform ScaleX="1.4" ScaleY="1.4"/>
-                    </Border.RenderTransform>
+                <Image Panel.ZIndex="-1" Style="{StaticResource MainPage_Background}"/>
+                <Border Style="{StaticResource Border_MainPage_One}" Name="MainPageTexts">
 
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -553,18 +500,17 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
 
-                        <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel Style="{StaticResource StackPanel_Three}">
 
-                            <TextBlock Foreground="#0A5F83" FontSize="35" FontWeight="Bold" TextAlignment="Center">
+                            <TextBlock Style="{StaticResource TextBlock_MainPage_One}">
                                 Book is your bicycle<LineBreak/>at any where, any time
                             </TextBlock>
 
-                            <TextBlock Margin="30 15" TextWrapping="Wrap" Foreground="#0A5F83" FontSize="25"  TextAlignment="Center">
+                            <TextBlock Style="{StaticResource TextBlock_MainPage_Two}">
                                 Explore our extensive collection of Books, Users, Reviews, Loans and maybe more!
                             </TextBlock>
 
                         </StackPanel>
-
 
                     </Grid>
                 </Border>
@@ -572,11 +518,7 @@
         </Border>
 
         <!-- books page-->
-        <Border Visibility="Collapsed" Background="{Binding ElementName=mainWindow, Path=Background}" RenderTransformOrigin="0.5 0.5" Name="BooksPage">
-
-            <Border.RenderTransform>
-                <TranslateTransform Y="0"/>
-            </Border.RenderTransform>
+        <Border Style="{StaticResource Border_BooksPage}" Background="{Binding ElementName=mainWindow, Path=Background}" Name="BooksPage">
 
             <Grid>
 
@@ -585,20 +527,22 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="Books" Foreground="#0A5F83" FontWeight="Bold" FontSize="35" Margin="25 25 0 0"/>
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 20 0 80">
-                    <TextBlock Opacity="0" Name="InvalidBookTextBlock" Text="Information Invalid Try Again!" Margin="25 0" TextAlignment="Center" Foreground="Red" FontSize="15"/>
+                <TextBlock Style="{StaticResource TextBlock_BooksPage_One}"/>
+
+                <StackPanel Style="{StaticResource StackPanel_Four}">
+                    <TextBlock Style="{StaticResource TextBlock_BooksPage_Two}" Name="InvalidBookTextBlock"/>
+
                     <local:MyFancyTextBox x:Name="TitleTextBox" InformationTextBlock="Title" Margin="25 10 25 0"/>
                     <local:MyFancyTextBox x:Name="DescriptionTextBox" InformationTextBlock="Description" Margin="25 10 25 0"/>
                     <local:MyFancyTextBox x:Name="AuthorTextBox" InformationTextBlock="Author" Margin="25 10 25 0"/>
                     <local:MyFancyTextBox x:Name="ISBNTextBox" InformationTextBlock="ISBN" Margin="25 10 25 10"/>
 
-                    <Button HorizontalAlignment="Center" x:Name="AddBookButton" Style="{StaticResource RoundedButtonNormal}" Height="50" Content="Add Book" Margin="0 0 0 0" VerticalAlignment="Bottom" Click="AddBookButton_Click"/>
+                    <Button Style="{StaticResource Button_BooksPage_AddBookButton}" x:Name="AddBookButton" Click="AddBookButton_Click"/>
                 </StackPanel>
 
 
-                <ScrollViewer BorderThickness="0" Margin="25 108 50 200" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Column="1">
-                    <ListView SelectionMode="Single" BorderThickness="0" FontSize="15" Foreground="{StaticResource BlueLinearGradient}" Grid.Column="1" x:Name="BooksListView" Background="Transparent">
+                <ScrollViewer Style="{StaticResource ScrollViewer_One}" Grid.Column="1">
+                    <ListView Style="{StaticResource ListView_Books}" Grid.Column="1" x:Name="BooksListView">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Width="Auto" Header="ID" DisplayMemberBinding="{Binding BookId}"/>
@@ -613,7 +557,7 @@
                     </ListView>
                 </ScrollViewer>
 
-                <Button Grid.Column="1" HorizontalAlignment="Center" x:Name="DeleteBookButton" Style="{StaticResource RoundedButtonNormal}" Height="50" Content="Delete Book" Margin="0 0 0 137.3" VerticalAlignment="Bottom" Click="DeleteBookButton_Click"/>
+                <Button Style="{StaticResource Button_BooksPage_DeleteBook}" Grid.Column="1" x:Name="DeleteBookButton" Click="DeleteBookButton_Click"/>
 
             </Grid>
 
@@ -621,11 +565,7 @@
         </Border>
 
         <!-- Users page-->
-        <Border Visibility="Collapsed" Background="{Binding ElementName=mainWindow, Path=Background}" RenderTransformOrigin="0.5 0.5" Name="UsersPage">
-
-            <Border.RenderTransform>
-                <TranslateTransform Y="0"/>
-            </Border.RenderTransform>
+        <Border Style="{StaticResource Border_UsersPage}" Background="{Binding ElementName=mainWindow, Path=Background}" Name="UsersPage">
 
             <Grid>
 
@@ -634,24 +574,29 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="Users" Foreground="#0A5F83" FontWeight="Bold" FontSize="35" Margin="25 25 0 0"/>
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 30 0 80">
-                    <TextBlock Opacity="0" Name="InvalidUserTextBlock" Text="Information Invalid Try Again!" Margin="25 25 0 0" TextAlignment="Center" Foreground="Red" FontSize="15"/>
+                <TextBlock Style="{StaticResource TextBlock_Users_One}"/>
+                
+                <StackPanel Style="{StaticResource StackPanel_Five}" >
+                    <TextBlock Style="{StaticResource TextBlock_Users_Two}" Name="InvalidUserTextBlock"/>
+                    
                     <local:MyFancyTextBox x:Name="UsernameTextBox" InformationTextBlock="Username" Margin="25 10 25 0"/>
                     <local:MyFancyTextBox x:Name="PasswordTextBox" InformationTextBlock="Password" Margin="25 10 25 0"/>
                     <local:MyFancyTextBox x:Name="EmailTextBox" InformationTextBlock="Email" Margin="25 10 25 0"/>
+                    
                     <StackPanel Margin="0 20 0 0">
-                        <TextBlock Name="UserUpRole" Margin="30 0 0 5" FontSize="15" Text="Role" Foreground="Gray"/>
-                        <RadioButton Margin="25 0 0 0" Name="UserAdminRadioButton" Content="Admin"/>
-                        <RadioButton Margin="25 0 0 0" Name="UserMemberRadioButton" Content="Member"/>
+                        <TextBlock Style="{StaticResource TextBlock_Users_Three}" Name="UserUpRole"/>
+                        <RadioButton Style="{StaticResource RadioButton_AdminRadioButton_User}" Name="UserAdminRadioButton" />
+                        <RadioButton Style="{StaticResource RadioButton_MemberRadioButton_User}" Name="UserMemberRadioButton" />
                     </StackPanel>
 
-                    <Button HorizontalAlignment="Center" x:Name="AddUserButton" Style="{StaticResource RoundedButtonNormal}" Height="50" Content="Add User" Margin="0 10 0 0" VerticalAlignment="Bottom" Click="AddUserButton_Click"/>
+                    <Button Style="{StaticResource Button_UsersPage_Add}" x:Name="AddUserButton" Click="AddUserButton_Click"/>
+
                 </StackPanel>
 
 
-                <ScrollViewer BorderThickness="0" Margin="25 98 50 150" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Column="1">
-                    <ListView SelectionMode="Single" BorderThickness="0" FontSize="15" Foreground="{StaticResource BlueLinearGradient}" Grid.Column="1" x:Name="UsersListView" Background="Transparent">
+                <ScrollViewer Style="{StaticResource ScrollViewer_Two}" Grid.Column="1">
+
+                    <ListView Style="{StaticResource ListView_Users}" Grid.Column="1" x:Name="UsersListView">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Width="Auto" Header="ID" DisplayMemberBinding="{Binding UserId}"/>
@@ -662,9 +607,10 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
+
                 </ScrollViewer>
 
-                <Button Grid.Column="1" HorizontalAlignment="Center" x:Name="DeleteUserButton" Style="{StaticResource RoundedButtonNormal}" Height="50" Content="Delete User" Margin="0 0 0 94.25" VerticalAlignment="Bottom" Click="DeleteUserButton_Click"/>
+                <Button Style="{StaticResource Button_UsersPage_Delete}" Grid.Column="1" x:Name="DeleteUserButton" Click="DeleteUserButton_Click"/>
 
             </Grid>
 
@@ -672,11 +618,7 @@
         </Border>
 
         <!-- LoansPage -->
-        <Border Visibility="Collapsed" Background="{Binding ElementName=mainWindow, Path=Background}" RenderTransformOrigin="0.5 0.5" Name="LoanssPage">
-
-            <Border.RenderTransform>
-                <TranslateTransform Y="0"/>
-            </Border.RenderTransform>
+        <Border Style="{StaticResource Border_LoansPage}" Background="{Binding ElementName=mainWindow, Path=Background}" Name="LoanssPage">
 
             <Grid>
 
@@ -685,17 +627,22 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="Loans" Foreground="#0A5F83" FontWeight="Bold" FontSize="35" Margin="25 25 0 0"/>
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 20 0 240">
-                    <TextBlock Opacity="0" Name="InvalidLoanTextBlock" Text="Information Invalid Try Again!" Margin="25 0" TextAlignment="Center" Foreground="Red" FontSize="15"/>
+                <TextBlock Style="{StaticResource TextBlock_LoansPage_One}"/>
+
+                <StackPanel Style="{StaticResource StackPanel_Six}">
+                    <TextBlock Style="{StaticResource TextBlock_LoansPage_Two}" Name="InvalidLoanTextBlock"/>
+
                     <local:MyFancyTextBox x:Name="LoanBookIdTextBox" InformationTextBlock="Book ID" Margin="25 10 25 0"/>
                     <local:MyFancyTextBox x:Name="LoanUserIdTextBox" InformationTextBlock="User ID" Margin="25 10 25 0"/>
+
                 </StackPanel>
-                <Button HorizontalAlignment="Center" x:Name="AddLoanButton" Style="{StaticResource RoundedButtonNormal}" Height="50" Content="Add Loan" Margin="0 0 0 137.3" VerticalAlignment="Bottom" Click="AddLoanButton_Click"/>
 
+                <Button Style="{StaticResource Button_Loans_Add}" x:Name="AddLoanButton" Click="AddLoanButton_Click"/>
 
-                <ScrollViewer BorderThickness="0" Margin="25 108 50 200" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Column="1">
-                    <ListView SelectionMode="Single" BorderThickness="0" FontSize="15" Foreground="{StaticResource BlueLinearGradient}" Grid.Column="1" x:Name="LoansListView" Background="Transparent">
+                <ScrollViewer Style="{StaticResource ScrollViewer_Three}" Grid.Column="1">
+
+                    <ListView Style="{StaticResource ListView_Loans}" Grid.Column="1" x:Name="LoansListView">
+
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Width="Auto" Header="Loan ID" DisplayMemberBinding="{Binding LoanId}"/>
@@ -705,12 +652,14 @@
                                 <GridViewColumn Width="Auto" Header="Return Date" DisplayMemberBinding="{Binding ReturnDate}"/>
                             </GridView>
                         </ListView.View>
+
                     </ListView>
+
                 </ScrollViewer>
 
-                <Button Grid.Column="1" HorizontalAlignment="Center" x:Name="LoanDeleteButton" Style="{StaticResource RoundedButtonNormal}" Height="50" Content="Delete Loan" Margin="0 0 0 137.3" VerticalAlignment="Bottom" Click="LoanDeleteButton_Click"/>
+                <Button Style="{StaticResource Button_Loans_Delete}" Grid.Column="1" x:Name="LoanDeleteButton" Click="LoanDeleteButton_Click"/>
 
-                <Button Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" x:Name="LoanReturnedButton" Style="{StaticResource RoundedButtonNormal}" Height="50" Content="Returned" Margin="0 0 0 137.3" VerticalAlignment="Bottom" Click="LoanReturnedButton_Click"/>
+                <Button Style="{StaticResource Button_Loans_Returned}" Grid.Column="0" Grid.ColumnSpan="2" x:Name="LoanReturnedButton" Click="LoanReturnedButton_Click"/>
 
             </Grid>
 
@@ -718,11 +667,7 @@
         </Border>
 
         <!--Reviews Page-->
-        <Border Visibility="Collapsed" Background="{Binding ElementName=mainWindow, Path=Background}" RenderTransformOrigin="0.5 0.5" Name="ReviewsPage">
-
-            <Border.RenderTransform>
-                <TranslateTransform Y="0"/>
-            </Border.RenderTransform>
+        <Border Style="{StaticResource Border_Reviews}" Background="{Binding ElementName=mainWindow, Path=Background}" Name="ReviewsPage">
 
             <Grid>
 
@@ -731,20 +676,26 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="Reviews" Foreground="#0A5F83" FontWeight="Bold" FontSize="35" Margin="25 25 0 0"/>
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 20 0 80">
-                    <TextBlock TextWrapping="Wrap" Opacity="0" Name="InvalidReviewTextBlock" Text="Information Invalid Try Again!" Margin="25 0" TextAlignment="Center" Foreground="Red" FontSize="15"/>
+                <TextBlock Style="{StaticResource TextBlock_Reviews_One}"/>
+
+                <StackPanel Style="{StaticResource StackPanel_Seven}">
+
+                    <TextBlock Style="{StaticResource TextBlock_Reviews_Two}" Name="InvalidReviewTextBlock"/>
+
                     <local:MyFancyTextBox x:Name="ReviewUserIdTextBox" InformationTextBlock="User ID" Margin="25 10 25 0"/>
                     <local:MyFancyTextBox x:Name="ReviewBookIdTextBox" InformationTextBlock="Book ID" Margin="25 10 25 0"/>
                     <local:MyFancyTextBox x:Name="ReviewRatingTextBox" InformationTextBlock="Rating" Margin="25 10 25 0"/>
                     <local:MyFancyTextBox x:Name="ReviewCommentTextBox" InformationTextBlock="Comment" Margin="25 10 25 10"/>
 
-                    <Button HorizontalAlignment="Center" x:Name="AddReviewButton" Style="{StaticResource RoundedButtonNormal}" Height="50" Content="Submit Review" Margin="0 0 0 0" VerticalAlignment="Bottom" Click="AddReviewButton_Click"/>
+                    <Button Style="{StaticResource Button_ReviewsPage_Add}" x:Name="AddReviewButton" Click="AddReviewButton_Click"/>
+
                 </StackPanel>
 
 
-                <ScrollViewer BorderThickness="0" Margin="25 108 50 200" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Column="1">
-                    <ListView SelectionMode="Single" BorderThickness="0" FontSize="15" Foreground="{StaticResource BlueLinearGradient}" Grid.Column="1" x:Name="ReviewsListView" Background="Transparent">
+                <ScrollViewer Style="{StaticResource ScrollViewer_Four}" Grid.Column="1">
+
+                    <ListView Style="{StaticResource ListView_Reviews}" Grid.Column="1" x:Name="ReviewsListView">
+
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Width="Auto" Header="Review ID" DisplayMemberBinding="{Binding ReviewId}"/>
@@ -755,15 +706,18 @@
                                 <GridViewColumn Width="Auto" Header="Review Date" DisplayMemberBinding="{Binding ReviewDate}"/>
                             </GridView>
                         </ListView.View>
+
                     </ListView>
+
                 </ScrollViewer>
 
-                <Button Grid.Column="1" HorizontalAlignment="Center" x:Name="DeleteReviewButton" Style="{StaticResource RoundedButtonNormal}" Height="50" Content="Delete Review" Margin="0 0 0 137.3" VerticalAlignment="Bottom" Click="DeleteReviewButton_Click"/>
+                <Button Style="{StaticResource Button_Reviews_Delete}" Grid.Column="1" x:Name="DeleteReviewButton" Click="DeleteReviewButton_Click"/>
 
             </Grid>
 
 
         </Border>
+
     </Grid>
     
 </Window>
